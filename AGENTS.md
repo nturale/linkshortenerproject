@@ -67,7 +67,7 @@ Topic-specific guidelines are organized in `/docs` directory. **🚨 ALWAYS read
 ## Project Structure
 
 ```
-linkshortnerproject/
+linkshortenerproject/
 ├── app/                    # Next.js App Router
 │   ├── layout.tsx          # Root layout (Clerk, fonts, nav)
 │   ├── page.tsx            # Home page
