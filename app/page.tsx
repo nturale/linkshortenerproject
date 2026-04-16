@@ -25,18 +25,6 @@ export default async function Home() {
             Create memorable short links, track click analytics, and manage all your URLs 
             in one powerful dashboard. Perfect for marketers, businesses, and content creators.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Link href="/sign-up">
-              <Button size="lg" className="w-full sm:w-auto">
-                Get Started Free
-              </Button>
-            </Link>
-            <Link href="/sign-in">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                Sign In
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -141,11 +129,6 @@ export default async function Home() {
           <p className="text-muted-foreground text-lg mb-8">
             Join thousands of users who trust us with their links. Start shortening for free today.
           </p>
-          <Link href="/sign-up">
-            <Button size="lg">
-              Create Your Free Account
-            </Button>
-          </Link>
         </div>
       </section>
     </div>
