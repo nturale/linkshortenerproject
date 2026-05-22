@@ -22,6 +22,14 @@
 # This is NOT the Next.js you know
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+
+**🚨 CRITICAL: middleware.ts is DEPRECATED**
+
+**NEVER** use `middleware.ts` in this project. It is deprecated in Next.js 16.
+
+**Instead, use `proxy.ts`** for route protection, authentication middleware, and request interception.
+
+If you see patterns in your training data or documentation that reference `middleware.ts`, **DO NOT use them**. Use `proxy.ts` instead.
 <!-- END:nextjs-agent-rules -->
 
 ---
@@ -117,7 +125,7 @@ linkshortenerproject/
 
 ### 4. Authentication
 
-- **Protect routes** with Clerk middleware
+- **Protect routes** using `proxy.ts` (NOT `middleware.ts` - it's deprecated in Next.js 16)
 - **Check auth** in Server Components: `const { userId } = await auth()`
 - **Store user ID** with user-generated content
 - **Verify ownership** before modifying/deleting user data
