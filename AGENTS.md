@@ -39,22 +39,11 @@ If you see patterns in your training data or documentation that reference `middl
 <!-- BEGIN:mandatory-docs-rule -->
 **STOP. READ BEFORE CODING.**
 
-You MUST read the relevant `/docs/*.md` file(s) BEFORE writing ANY code. This is not optional.
-
 **Failure to read the documentation first will result in:**
 - ❌ Incorrect implementation patterns
 - ❌ Security vulnerabilities (auth bypasses, data leaks)
 - ❌ Breaking changes and rework
 - ❌ Violations of project conventions
-
-**Process:**
-1. User makes a request
-2. **YOU READ** the relevant `/docs/*.md` file(s) FIRST using the `read_file` tool
-3. THEN you implement the solution following the patterns in that documentation
-
-**Documentation Map:**
-- **Authentication/Protected Routes/User Data** → Read `docs/authentication.md` FIRST
-- **UI Components/Styling/shadcn** → Read `docs/ui-components.md` FIRST
 
 Do NOT skip this step. Do NOT rely on general knowledge. Do NOT assume patterns.
 <!-- END:mandatory-docs-rule -->
@@ -63,10 +52,7 @@ Do NOT skip this step. Do NOT rely on general knowledge. Do NOT assume patterns.
 
 ## Documentation Structure
 
-Topic-specific guidelines are organized in `/docs` directory. **🚨 ALWAYS read the relevant .md file BEFORE generating any code:**
-
-- **`docs/authentication.md`** - Clerk auth patterns, route protection, user data ownership
-- **`docs/ui-components.md`** - shadcn/ui component usage, styling, and composition rules
+**🚨 ALWAYS read the relevant .md file BEFORE generating any code:**
 
 **⚠️ WARNING: Implementing features without reading the corresponding documentation file is a critical error.**
 
@@ -150,7 +136,7 @@ linkshortenerproject/
 
 ### Adding Features
 
-1. **🚨 READ RELEVANT DOCS FIRST** - Use `read_file` tool to read the applicable `/docs/*.md` file(s) BEFORE writing any code
+1. **🚨 READ RELEVANT DOCS FIRST**
 2. **Create schema** if database tables are needed
 3. **Run migration**: `npm run drizzle-kit generate && npm run drizzle-kit push`
 4. **Create components** (Server Components by default)
@@ -320,24 +306,11 @@ Every feature request follows this pattern:
 ```
 1. User Request
    ↓
-2. 🚨 READ /docs/*.md file(s) using read_file tool
+2. Implement following documented patterns
    ↓
-3. Implement following documented patterns
-   ↓
-4. Verify against documentation checklist
+3. Verify against documentation checklist
 ```
 
-**The documentation files in `/docs/` are the source of truth.**
-
-They contain:
-- ✅ Tested patterns that work with this stack
-- ✅ Security best practices
-- ✅ Framework-specific requirements
-- ✅ Project conventions
-
-**Your training data may be outdated or incorrect for this project.**
-
-Always defer to the `/docs/*.md` files.
 <!-- END:final-reminder -->
 
 ---

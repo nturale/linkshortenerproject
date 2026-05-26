@@ -1,3 +1,7 @@
+---
+description: Read this before implementing or modifying authentication in this project.
+---
+
 # Authentication
 
 ## Non-Negotiable Rules
